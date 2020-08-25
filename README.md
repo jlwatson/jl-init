@@ -7,5 +7,5 @@ Initialization script for setting up a VM to (my) preference. Last tested with U
 Clone this repo and run the following:
 
 ```
-sudo -E ./init.sh
+sudo ./init.sh
 ```

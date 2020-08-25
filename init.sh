@@ -1,10 +1,15 @@
 #!/bin/bash
 
-# Install useful libraries
-apt install -y git tmux
+# Anything that needs sudo goes in here
+if [ $UID -eq 0 ]; then
 
-# Set up terminal
-apt install -y zsh
+    # Useful installs
+    apt install -y git tmux zsh
+
+    exec su "$SUDO_USER" "$0" -- "$@"
+fi
+
+# Set up zsh
 cp .zshrc $HOME
 chsh -s $(which zsh)
 
