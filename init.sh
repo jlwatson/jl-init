@@ -20,3 +20,4 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 curl -u "jlwatson" --data "{\"title\":\"VM_`date +%Y%m%d%H%M%S`\",\"key\":\"`cat ~/.ssh/id_rsa.pub`\"}" https://api.github.com/user/keys
 
+git config --global core.editor "vim"
