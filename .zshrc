@@ -1,6 +1,6 @@
 # ZSH config
 
-alias ls="ls -G"
+alias ls="ls -G --color=auto"
 alias grep="grep -s --binary-files=without-match"
 
 export CLICOLOR=1
